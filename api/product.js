@@ -8,7 +8,7 @@ const router = express.Router();
  */
 router.get("/", async (req, res) => {
   try {
-    return res.status(200).render("pagina.ejs");
+    return res.status(200).render("/views/pagina.ejs");
   } 
   catch (error) {
     console.error(error);
