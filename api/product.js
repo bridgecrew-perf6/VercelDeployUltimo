@@ -8,7 +8,7 @@ const router = express.Router();
  */
 router.get("/", async (req, res) => {
   try {
-    return res.status(200).render("pagina.html");
+    return res.status(200).render("pagina.ejs");
   } 
   catch (error) {
     console.error(error);
