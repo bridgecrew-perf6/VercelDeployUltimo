@@ -12,7 +12,8 @@ router.get("/", async (req, res) => {
   } 
   catch (error) {
     console.error(error);
-    return res.status(200).render("vista.ejs");
+    return res.status(500).send("Server error");
+    
   }
 });
 
