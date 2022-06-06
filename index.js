@@ -1,7 +1,10 @@
 const express = require("express");
 const app = express();
+const ejs = require("ejs");
 const product = require("./api/product");
 
+app.set("view engine", "ejs");
+app.engine("ejs", require("ejs").__express);
 app.use(express.json({ extended: false }));
 
 app.use("/api/product", product);
