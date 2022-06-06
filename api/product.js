@@ -8,7 +8,7 @@ const router = express.Router();
  */
 router.get("/", async (req, res) => {
   try {
-    return res.render("vista.ejs");
+    return res.status(200).render("vista.ejs");
   } 
   catch (error) {
     console.error(error);
