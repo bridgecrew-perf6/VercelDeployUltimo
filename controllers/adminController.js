@@ -1,5 +1,6 @@
 const OneModel = require("../models/myModel");
 const TwoModel = require("../models/postModel");
+const express = require("express");
 const moment = require("moment");
 const bcrypt = require("bcrypt");
 const { hash } = require("bcrypt");
@@ -154,4 +155,4 @@ exports.subirPost = (req, res) => {
 //    console.error(err)
 // })
 // };
-module.exports = router;
+module.exports = exports;
