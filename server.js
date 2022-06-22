@@ -27,14 +27,5 @@ const port = 8080;
 app.listen(port, () => {
     console.log(`Servidor corriendo en el puerto ${port} correctamente`);
 });
-control.get("/", async (req, res) => {
-    try {
-      return res.status(200).render("index.ejs", { isLogin: isLogin, login: login });
-    } 
-    catch (error) {
-      console.error(error);
-      return res.status(500).send("Server error");
-      
-    }
-  });
+
 module.exports = control;
