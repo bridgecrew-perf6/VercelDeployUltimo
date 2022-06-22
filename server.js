@@ -3,7 +3,7 @@ const app = require("./app");
 const dotenv = require("dotenv");
 
 const express = require("express");
-const router = express.Router();
+const control = express.Router();
 
 //Carga de variables de entorno
 dotenv.config({ path: "./config.env" });
@@ -27,4 +27,14 @@ const port = 8080;
 app.listen(port, () => {
     console.log(`Servidor corriendo en el puerto ${port} correctamente`);
 });
-module.exports = app;
+control.get("/", async (req, res) => {
+    try {
+      return res.status(200).render("index.ejs", { isLogin: isLogin, login: login });
+    } 
+    catch (error) {
+      console.error(error);
+      return res.status(500).send("Server error");
+      
+    }
+  });
+module.exports = control;
