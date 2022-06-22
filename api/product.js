@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
-
+global.isLogin = 0;
+global.login = false;
 /**
  * GET product list.
  *
