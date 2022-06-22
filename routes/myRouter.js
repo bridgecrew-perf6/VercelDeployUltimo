@@ -1,6 +1,6 @@
 const Post = require("../models/postModel");
-const myController = require("../controllers/myController");
-const adminController = require("../controllers/adminController");
+const myController = require("../api/myController");
+const adminController = require("../api/adminController");
 const express = require("express");
 const router = express.Router();
 
