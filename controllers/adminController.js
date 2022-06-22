@@ -5,6 +5,7 @@ const bcrypt = require("bcrypt");
 const { hash } = require("bcrypt");
 const multer = require("multer");
 const upload = multer({ dest: "images/upload/" });
+const router = express.Router();
 
 global.isLogin = 0;
 global.login = false;
