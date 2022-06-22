@@ -154,3 +154,4 @@ exports.subirPost = (req, res) => {
 //    console.error(err)
 // })
 // };
+module.exports = router;
