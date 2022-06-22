@@ -2,6 +2,9 @@ const mongoose = require("mongoose");
 const app = require("./app");
 const dotenv = require("dotenv");
 
+const express = require("express");
+const router = express.Router();
+
 //Carga de variables de entorno
 dotenv.config({ path: "./config.env" });
 const DB = process.env.DATABASE.replace(
@@ -24,3 +27,4 @@ const port = 8080;
 app.listen(port, () => {
     console.log(`Servidor corriendo en el puerto ${port} correctamente`);
 });
+module.exports = app;
